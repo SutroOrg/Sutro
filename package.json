@@ -1,6 +1,6 @@
 {
   "name": "@sutro-dev/eslint-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared ESLint flat config for TypeScript, React, import sorting, and pnpm workspaces.",
   "type": "module",
   "main": "index.js",
