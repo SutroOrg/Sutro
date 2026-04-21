@@ -1,0 +1,61 @@
+{
+  "name": "@sutro-dev/eslint-config",
+  "version": "0.1.0",
+  "description": "Shared ESLint flat config for TypeScript, React, import sorting, and pnpm workspaces.",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./standard-ignores": "./standard-ignores.js",
+    "./config-files-to-ignore": "./config-files-to-ignore.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "standard-ignores.js",
+    "config-files-to-ignore.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SutroOrg/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SutroOrg/eslint-config/issues"
+  },
+  "homepage": "https://github.com/SutroOrg/eslint-config#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": "^9.34.0"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.34.0",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-package-json-dependencies": "^1.0.20",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.2.0",
+    "eslint-plugin-workspaces": "^0.11.0",
+    "globals": "^16.0.0",
+    "typescript-eslint": "^8.42.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.34.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  }
+}
