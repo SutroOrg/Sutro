@@ -24,14 +24,20 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SutroOrg/eslint-config.git"
+    "url": "git+https://github.com/SutroOrg/Sutro.git",
+    "directory": "packages/eslint-config"
   },
   "bugs": {
-    "url": "https://github.com/SutroOrg/eslint-config/issues"
+    "url": "https://github.com/SutroOrg/Sutro"
   },
-  "homepage": "https://github.com/SutroOrg/eslint-config#readme",
+  "homepage": "https://github.com/SutroOrg/Sutro",
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "build": "pnpm pack --dry-run",
+    "lint": "prettier --check .",
+    "test": "node --input-type=module -e \"const mod = await import('./index.js'); if (!Array.isArray(mod.default) || mod.default.length === 0) throw new Error('Expected a non-empty ESLint config export'); console.log('Loaded', mod.default.length, 'config blocks');\""
   },
   "peerDependencies": {
     "eslint": "^9.34.0"

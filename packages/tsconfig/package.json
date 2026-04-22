@@ -11,10 +11,22 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SutroOrg/Sutro.git",
+    "directory": "packages/tsconfig"
+  },
+  "bugs": {
+    "url": "https://github.com/SutroOrg/Sutro"
+  },
+  "homepage": "https://github.com/SutroOrg/Sutro",
   "scripts": {
+    "build": "pnpm pack --dry-run",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "pack:dry-run": "pnpm pack --dry-run"
+    "lint": "prettier --check .",
+    "pack:dry-run": "pnpm pack --dry-run",
+    "test": "node --input-type=module -e \"import { readFileSync } from 'node:fs'; const config = JSON.parse(readFileSync(new URL('./tsconfig.json', import.meta.url), 'utf8')); if (!config.compilerOptions?.strict) throw new Error('Expected strict mode in tsconfig'); console.log('Validated tsconfig compiler options');\""
   },
   "peerDependencies": {
     "typescript": ">=5.6.0"
@@ -22,6 +34,5 @@
   "devDependencies": {
     "prettier": "3.6.2",
     "typescript": "5.9.2"
-  },
-  "packageManager": "pnpm@10.30.0+sha512.2b5753de015d480eeb88f5b5b61e0051f05b4301808a82ec8b840c9d2adf7748eb352c83f5c1593ca703ff1017295bc3fdd3119abb9686efc96b9fcb18200937"
+  }
 }

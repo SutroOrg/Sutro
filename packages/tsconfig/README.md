@@ -2,6 +2,8 @@
 
 Shared TypeScript base configuration for Sutro packages.
 
+This package is maintained in the [`SutroOrg/Sutro`](https://github.com/SutroOrg/Sutro) monorepo.
+
 ## Usage
 
 Install the package:
@@ -28,7 +30,10 @@ Extend it from a package `tsconfig.json`:
 Dry-run the package contents before publishing:
 
 ```sh
-pnpm pack --dry-run
+pnpm install
+pnpm lint
+pnpm test
+pnpm build
 ```
 
 Publish the scoped package publicly:

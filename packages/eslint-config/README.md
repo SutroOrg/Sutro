@@ -2,6 +2,8 @@
 
 Shared ESLint flat config for Sutro-style TypeScript and React projects.
 
+This package is maintained in the [`SutroOrg/Sutro`](https://github.com/SutroOrg/Sutro) monorepo.
+
 ## Install
 
 ```sh
@@ -11,9 +13,7 @@ pnpm add -D @sutro-dev/eslint-config eslint@^9.34.0
 ## Usage
 
 ```js
-import sutroDevConfig, {
-  standardIgnores,
-} from "@sutro-dev/eslint-config";
+import sutroDevConfig, { standardIgnores } from "@sutro-dev/eslint-config";
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [
@@ -44,7 +44,9 @@ This package is an opinionated monorepo-oriented flat config. It currently suppo
 ## Manual Release
 
 ```sh
-npm install
-node --input-type=module -e "import('./index.js').then((config) => console.log(config.default.length))"
-npm publish --access public
+pnpm install
+pnpm lint
+pnpm test
+pnpm build
+pnpm publish --access public
 ```
