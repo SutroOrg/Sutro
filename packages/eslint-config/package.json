@@ -1,6 +1,6 @@
 {
   "name": "@sutro-dev/eslint-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Shared ESLint flat config for TypeScript, React, import sorting, and pnpm workspaces.",
   "type": "module",
   "main": "index.js",
@@ -18,10 +18,9 @@
     "index.d.ts",
     "standard-ignores.js",
     "config-files-to-ignore.js",
-    "README.md",
-    "LICENSE"
+    "README.md"
   ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SutroOrg/Sutro.git",
