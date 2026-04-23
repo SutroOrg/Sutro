@@ -1,0 +1,12 @@
+{
+  "extends": ["//"],
+
+  "tasks": {
+    // This is a build task definition that is used by the workspaces
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "package.json", "tsconfig.json", "tsconfig.*.json"],
+      "outputs": ["dist/**"]
+    }
+  }
+}
